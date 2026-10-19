@@ -3,9 +3,12 @@ import copy from "@content/copy.json";
 import site from "@content/site.json";
 import galeria from "@content/galeria.json";
 import entorno from "@content/entorno.json";
+import plantas from "@content/plantas.json";
 
-export { copy, site, galeria, entorno };
+export { copy, site, galeria, entorno, plantas };
 
+export type Casa = (typeof plantas.casas)[number] & { gourmet?: string };
+export type RuaMapa = (typeof plantas.ruas)[number];
 export type Rua = (typeof galeria.ruas)[number];
 export type Foto = Rua["fotos"][number];
 export type Ponto = (typeof entorno.pontos)[number] & { detalhe?: string; tempo?: string; borda?: string };
@@ -14,6 +17,7 @@ export const nav = [
   { href: "#localizacao", label: "Localização" },
   { href: "#condominio", label: "Condomínio" },
   { href: "#casas", label: "Casas" },
+  { href: "#plantas", label: "Plantas" },
   { href: "#lazer", label: "Lazer" },
   { href: "#entorno", label: "Entorno" },
   { href: "#condicoes", label: "Condições" },

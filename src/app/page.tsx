@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileDock } from "@/components/layout/MobileDock";
 import { Casas, Condicoes, Condominio, Contato, Hero, Localizacao } from "@/components/sections/Sections";
 import { Lazer } from "@/components/sections/Lazer";
+import { Plantas } from "@/components/sections/Plantas";
 import { Entorno } from "@/components/sections/Entorno";
 import { Manifesto } from "@/components/sections/Manifesto";
 
@@ -16,6 +17,7 @@ export default function Home() {
         <Localizacao />
         <Condominio />
         <Casas />
+        <Plantas />
         <Lazer />
         <Entorno />
         <Condicoes />

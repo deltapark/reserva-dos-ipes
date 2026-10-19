@@ -200,6 +200,50 @@ h1,.h2,.end h2,.spec b,.vals b,.lamp-line,.end__phr,.card h3,.ft__sig,.cmp__tag,
   .lbx__thumbs{justify-content:flex-start}
 }
 
+/* plantas: trabalham numa coluna mais estreita e centrada que o resto da página, porque o
+   desenho só é legível até certa largura. A lista escolhe e o desenho troca no lugar. */
+.pl__col{max-width:1120px;margin-inline:auto}
+.pl__sel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(20px,2.4vw,40px);border-top:1px solid var(--line);transition:border-color .6s}
+@media(min-width:760px){.pl__sel{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1100px){.pl__sel{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.pl__sel button{display:grid;gap:3px;align-content:center;width:100%;min-height:68px;padding:12px 0;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink-2);text-align:left;cursor:pointer;transition:color .25s,border-color .6s}
+.pl__sel button:hover,.pl__sel button[aria-pressed="true"]{color:var(--ink)}
+.pl__sel i{font:600 11px/1 var(--f);font-style:normal;letter-spacing:.13em;text-transform:uppercase;opacity:.75}
+.pl__sel button[aria-pressed="true"] i{color:var(--lamp);opacity:1}
+.pl__sel b{font:500 16px/1.25 var(--f)}
+.pl__sel button[aria-pressed="true"] b{font-weight:700}
+/* o quadro adota a proporção do desenho escolhido: nenhum deles sobra tarja */
+.pl__quadro{position:relative;margin-top:20px;overflow:hidden;border:1px solid var(--line);border-radius:4px;background:var(--surface);transition:aspect-ratio .55s var(--ease),background-color .6s,border-color .6s}
+.pl__quadro img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .5s var(--ease)}
+.pl__quadro img.on{opacity:1}
+.pl__tipo{position:absolute;left:16px;bottom:14px;padding:6px 11px;border-radius:3px;background:var(--ink);color:var(--bg);font:600 12.5px/1 var(--f);transition:background-color .6s,color .6s}
+.pl__lupa{position:absolute;right:14px;bottom:13px;display:inline-flex;align-items:center;gap:8px;min-height:38px;padding:0 14px;border:1px solid var(--line);border-radius:3px;background:var(--bg);color:var(--ink);font:600 12.5px/1 var(--f);cursor:zoom-in;transition:background-color .6s,border-color .2s,color .6s}
+.pl__lupa:hover{border-color:var(--ink)}
+.pl__lupa svg{width:14px;height:14px}
+.pl__med{margin-top:clamp(28px,3vw,44px)}
+.spec--lamp b,.spec--lamp span{color:var(--lamp)}
+.pl__mapa{margin-top:clamp(64px,8vw,120px)}
+.pl__impl{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:4px;background:var(--surface);transition:background-color .6s,border-color .6s}
+.pl__impl img{width:100%;height:auto;transition:filter .5s var(--ease)}
+.pl__impl.is-focus img{filter:saturate(.4) brightness(.97) contrast(.95)}
+:root[data-mode="noite"] .pl__impl.is-focus img{filter:saturate(.4) brightness(.62)}
+.pl__ov{position:absolute;inset:0;pointer-events:none}
+.pl__ov b{position:absolute;display:block;border:1.5px solid var(--c);border-radius:2px;background:color-mix(in srgb,var(--c) 32%,transparent);opacity:0;transition:opacity .45s var(--ease)}
+.on-rosa b[data-rua="rosa"],.on-amarelo b[data-rua="amarelo"],.on-branco b[data-rua="branco"],.on-roxo b[data-rua="roxo"]{opacity:1}
+.pl__ruas{border-top:1px solid var(--line);transition:border-color .6s}
+.pl__ruas button{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 16px;align-items:baseline;width:100%;padding:16px 0;border:0;border-bottom:1px solid var(--line);background:transparent;text-align:left;cursor:pointer;transition:border-color .3s var(--ease)}
+.pl__ruas button[aria-pressed="true"]{border-bottom:2px solid var(--ink);padding-bottom:15px}
+.pl__ruas b{font:500 clamp(16px,1.3vw,19px)/1.3 var(--f);color:var(--ink-2);transition:color .25s}
+.pl__ruas button:hover b,.pl__ruas button[aria-pressed="true"] b{color:var(--ink)}
+.pl__ruas em{grid-column:1;font-style:normal;font-size:13px;color:var(--ink-2)}
+.pl__ruas span{grid-row:1/3;grid-column:2;font-family:var(--ft);font-weight:300;font-size:clamp(28px,2.4vw,38px);line-height:1;color:var(--ink-2);font-variant-numeric:lining-nums tabular-nums;transition:color .3s}
+.pl__ruas button[aria-pressed="true"] span{color:var(--ink)}
+.pl__legal{margin-top:clamp(32px,4vw,56px);padding-top:24px;border-top:1px solid var(--line);font-size:13px;line-height:1.6;color:var(--ink-2);max-width:74ch;transition:border-color .6s}
+/* a planta em tela cheia não tem miniaturas embaixo: sobra altura para o desenho */
+.pl__cheia[open]{grid-template-rows:auto minmax(0,1fr)}
+.pl__cheia .lbx__fig img{max-height:calc(100dvh - 170px);background:#fff}
+.pl__cheia .lbx__cap{max-width:70ch;font-weight:500;color:#C9D3E4}
+
 /* lazer: a foto troca no lugar */
 .lz{display:grid;gap:40px}
 @media(min-width:960px){.lz{grid-template-columns:5fr 7fr;gap:72px}}
