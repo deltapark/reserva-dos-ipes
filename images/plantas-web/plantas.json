@@ -1,0 +1,67 @@
+{
+  "casa-decorado-sol": {
+    "w": 1856,
+    "h": 736,
+    "ratio": 2.5217
+  },
+  "casa-decorado": {
+    "w": 1856,
+    "h": 736,
+    "ratio": 2.5217
+  },
+  "casa-tipo-1-sol": {
+    "w": 1896,
+    "h": 728,
+    "ratio": 2.6044
+  },
+  "casa-tipo-1": {
+    "w": 1896,
+    "h": 728,
+    "ratio": 2.6044
+  },
+  "casa-tipo-2-sol": {
+    "w": 1904,
+    "h": 952,
+    "ratio": 2
+  },
+  "casa-tipo-2": {
+    "w": 1904,
+    "h": 952,
+    "ratio": 2
+  },
+  "casa-tipo-3-sol": {
+    "w": 1880,
+    "h": 968,
+    "ratio": 1.9421
+  },
+  "casa-tipo-3": {
+    "w": 1880,
+    "h": 968,
+    "ratio": 1.9421
+  },
+  "casa-tipo-4-sol": {
+    "w": 1912,
+    "h": 776,
+    "ratio": 2.4639
+  },
+  "casa-tipo-4": {
+    "w": 1912,
+    "h": 776,
+    "ratio": 2.4639
+  },
+  "casa-tipo-5-sol": {
+    "w": 1888,
+    "h": 928,
+    "ratio": 2.0345
+  },
+  "casa-tipo-5": {
+    "w": 1888,
+    "h": 928,
+    "ratio": 2.0345
+  },
+  "condominio": {
+    "w": 1520,
+    "h": 976,
+    "ratio": 1.5574
+  }
+}
