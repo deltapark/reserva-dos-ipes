@@ -1,25 +1,23 @@
 {
-  "titulo": "A rua muda. A casa, não.",
-  "texto": "São 62 endereços e uma planta só: 70,27 m², três quartos, um deles suíte. O que muda de um lote para o outro é o quintal e o lado por onde o carro entra.",
-  "mapaTitulo": "Quatro ruas de ipê, 62 casas.",
-  "mapaTexto": "Cada rua tem o seu ipê plantado na calçada. Passe por uma delas para ver onde ficam as suas casas.",
+  "titulo": "Uma casa, seis jeitos de ocupar o lote.",
+  "texto": "São 70,27 m², três quartos e uma suíte em todas as 62 casas. Muda a posição da casa no terreno, e com ela o desenho do quintal.",
+  "mapaLegenda": "62 casas em quatro ruas de ipê. Lotes de 180 m².",
   "mapaNota": "A portaria fica na ponta de baixo, ao lado do estacionamento de visitantes. A área de lazer, com piscina, playground e pomar, ocupa o canto de cima à esquerda.",
-  "cta": "Quero escolher minha casa",
-  "legal": "Perspectivas artísticas das plantas humanizadas, com as medidas do projeto arquitetônico.",
-  "ampliar": "Ampliar",
   "mapaAlt": "Implantação do Reserva dos Ipês: 62 lotes numerados em quatro ruas, com portaria, estacionamento de visitantes e área de lazer",
-  "mapa": { "img": "condominio", "w": 1520, "h": 976 },
-  "ambientes": [
-    { "nome": "Suíte", "m2": "11,26" },
-    { "nome": "Cozinha", "m2": "12,09" },
-    { "nome": "Sala", "m2": "8,99" }
-  ],
+  "mapa": {
+    "img": "condominio",
+    "w": 1520,
+    "h": 976
+  },
+  "cta": "Quero escolher minha casa",
+  "ampliar": "Ampliar planta",
+  "voltar": "Ver o condomínio",
+  "legal": "Perspectivas artísticas das plantas humanizadas, com as medidas do projeto arquitetônico.",
+  "exemplo": "Na animação, o lote 21 aparece só como exemplo.",
   "casas": [
     {
       "id": "casa-tipo-1",
       "tipo": "Tipo 1",
-      "nome": "Quintal ao lado da casa",
-      "texto": "A casa encosta na frente do lote e o quintal inteiro sobra de um lado só, da garagem até os fundos.",
       "quintal": "74,51",
       "w": 1896,
       "h": 728
@@ -27,8 +25,6 @@
     {
       "id": "casa-tipo-2",
       "tipo": "Tipo 2",
-      "nome": "Entrada pela outra ponta",
-      "texto": "A mesma casa virada: a sala e a garagem ficam na parte de baixo do lote, os quartos no alto.",
       "quintal": "74,85",
       "w": 1904,
       "h": 952
@@ -36,8 +32,6 @@
     {
       "id": "casa-tipo-3",
       "tipo": "Tipo 3",
-      "nome": "Quintal em L",
-      "texto": "A casa recua para o alto do lote e o quintal abre em duas frentes, pela lateral e pelos fundos.",
       "quintal": "75,33",
       "w": 1880,
       "h": 968
@@ -45,8 +39,6 @@
     {
       "id": "casa-tipo-4",
       "tipo": "Tipo 4",
-      "nome": "Garagem na faixa de baixo",
-      "texto": "Virada, com a entrada no canto de baixo e o quintal correndo por um lado inteiro do lote.",
       "quintal": "74,50",
       "w": 1912,
       "h": 776
@@ -54,8 +46,6 @@
     {
       "id": "casa-tipo-5",
       "tipo": "Tipo 5",
-      "nome": "O maior quintal",
-      "texto": "Os 75,50 m² de área permeável tomam os fundos inteiros: é o lote com mais terra livre.",
       "quintal": "75,50",
       "w": 1888,
       "h": 928
@@ -63,42 +53,10 @@
     {
       "id": "casa-decorado",
       "tipo": "Decorado",
-      "nome": "Com espaço gourmet",
-      "texto": "A mesma casa com 9,70 m² de espaço gourmet construídos nos fundos: bancada, churrasqueira e mesa.",
       "quintal": "65,85",
       "gourmet": "9,70",
       "w": 1856,
       "h": 736
-    }
-  ],
-  "ruas": [
-    {
-      "id": "rosa",
-      "nome": "Rua Ipê Rosa",
-      "lotes": "Lotes 07 a 30",
-      "casas": 24,
-      "areas": [[0.166, 0.005, 0.673, 0.145], [0.157, 0.207, 0.682, 0.158]]
-    },
-    {
-      "id": "amarelo",
-      "nome": "Rua Ipê Amarelo",
-      "lotes": "Lotes 40 a 62",
-      "casas": 23,
-      "areas": [[0.157, 0.371, 0.682, 0.141], [0.208, 0.574, 0.643, 0.148]]
-    },
-    {
-      "id": "branco",
-      "nome": "Rua Ipê Branco",
-      "lotes": "Lotes 31 a 39",
-      "casas": 9,
-      "areas": [[0.887, 0.005, 0.091, 0.661]]
-    },
-    {
-      "id": "roxo",
-      "nome": "Rua Ipê Roxo",
-      "lotes": "Lotes 01 a 06",
-      "casas": 6,
-      "areas": [[0.005, 0.227, 0.089, 0.442]]
     }
   ]
 }

@@ -28,12 +28,12 @@ LP nova em `/` (06/10/2026); teaser antigo em `/teaser/` (noindex). Conferir `.h
 - Sem bolinhas/pílulas coloridas para identificar ipê: o nome e a foto bastam (pedido do cliente).
 - Logo: SVG original otimizado com svgo (600 KB → 80 KB), uma versão dourada e uma clara para o modo Noite.
 
-## Plantas (19/10/2026)
-- Seção `#plantas`, entre Casas e Lazer. Trabalha numa coluna de 1120px centrada (`.pl__col`), mais estreita que o resto da página: o desenho da planta só é legível até essa largura.
-- A planta é a mesma nas 62 casas; o que muda é a implantação no lote. Por isso a lista nomeia pelo que se reconhece ("Quintal ao lado da casa") e deixa "Tipo 1" como rótulo pequeno. A lista troca o desenho no lugar, como a seção de Lazer, e o quadro adota a proporção de cada planta.
-- Cada planta tem dois renders: com sol e sem. O botão Dia/Noite escolhe — Dia usa a versão com sol.
-- A implantação fecha a seção no par invertido da seção Condomínio. Passar por uma rua acende os lotes dela sobre o mapa, na cor do ipê; na lista o destaque é só o traço escuro, porque a identificação por cor fora do mapa foi vetada pelo cliente.
-- Conteúdo, medidas e as faixas de lotes (fração do quadro 1520x976) ficam em `content/plantas.json`. Para corrigir um destaque, ajuste `areas` ali.
+## Plantas (23/10/2026)
+- Seção `#plantas`, entre Casas e Lazer. A planta é a mesma nas 62 casas; o que muda é a implantação no lote (Tipo 1 a 5 e Decorado). Escolhida entre protótipos pelo Thales: "9. Escolha e aproxima" no desktop e "M2. Lista que abre" no celular.
+- Desktop (a partir de 960px, `.pl__d`): o quadro abre no condomínio. Escolher uma implantação nas miniaturas desce até o lote 21 (só exemplo, não temos qual tipo fica em qual lote), o lote gira e vira a planta, que pousa no quadro. "Ver o condomínio" faz o caminho de volta. A animação fica em `src/lib/lote.ts`.
+- Celular (`.pl__m`): o condomínio de ponta a ponta e as seis implantações em lista; uma aberta por vez. Ampliar abre a planta na altura da tela, arrastável para os lados.
+- Cada planta tem dois renders: com sol e sem. O botão Dia/Noite escolhe; Dia usa a versão com sol.
+- Conteúdo e medidas em `content/plantas.json`.
 - Imagens: `scripts/plantas.mjs` corta a tarja preta dos renders de `assets-originais/PLANTAS/` (fora do Git) e grava `public/images/plantas-web/<id>-{900,1500,2200}.webp`. Rodar só quando entrar planta nova; os `w`/`h` do JSON vêm do `plantas.json` que o script escreve ao lado das imagens.
 
 ## Entorno e manifesto (05/10/2026)
