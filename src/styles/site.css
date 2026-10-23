@@ -206,9 +206,12 @@ h1,.h2,.end h2,.spec b,.vals b,.lamp-line,.end__phr,.card h3,.ft__sig,.cmp__tag,
 .pl figure,.pl dl,.pl dd{margin:0}
 .pl ul{margin:0;padding:0;list-style:none}
 .pl__d{display:none}
-@media(min-width:960px){.pl__d{display:grid;gap:clamp(36px,4.6vw,72px)}.pl__m{display:none}}
-.pl__row{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:clamp(32px,3.6vw,64px);align-items:end}
-.pl__fig{position:relative;aspect-ratio:1904/968;overflow:hidden;border-radius:4px;background:var(--surface);transition:background-color .6s}
+@media(min-width:960px){.pl__d{display:grid;gap:clamp(20px,3vh,36px)}.pl__m{display:none}.pl .casa__head{margin-bottom:clamp(20px,3vh,36px)}}
+/* título + quadro + miniaturas cabem numa tela: o quadro fica com a altura que sobra
+   (cabeçalho fixo, título e miniaturas somam uns 410px) e a largura acompanha a proporção */
+.pl__d{--plh:clamp(300px,calc(100svh - 410px),720px)}
+.pl__row{display:flex;justify-content:flex-start;align-items:flex-end;gap:clamp(32px,3.6vw,64px)}
+.pl__fig{position:relative;flex:0 1 auto;width:min(calc(100% - 260px - clamp(32px,3.6vw,64px)),calc(var(--plh) * 1904 / 968));aspect-ratio:1904/968;overflow:hidden;border-radius:4px;background:var(--surface);transition:background-color .6s}
 .pl__fig[data-fase="casa"]{cursor:zoom-in}
 .pl__pi{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:left bottom;opacity:0;transition:opacity .5s var(--ease)}
 .pl__pi.on{opacity:1}
@@ -218,7 +221,7 @@ h1,.h2,.end h2,.spec b,.vals b,.lamp-line,.end__phr,.card h3,.ft__sig,.cmp__tag,
 .pl__fly{position:absolute;left:0;top:0;max-width:none;height:auto;opacity:0;transform-origin:50% 50%;pointer-events:none;will-change:transform,opacity}
 /* a planta de verdade aparece por baixo em 0,5 s; só então o voo some */
 .pl__fig[data-fase="casa"] .pl__fly{visibility:hidden;transition:visibility 0s .55s}
-.pl__info{display:grid;gap:18px;padding-bottom:4px}
+.pl__info{flex:0 0 260px;display:grid;gap:18px;padding-bottom:4px}
 .pl__t{font-family:var(--ft);font-weight:300;font-size:clamp(40px,4.2vw,64px);line-height:1;letter-spacing:-.02em}
 .pl__dl div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px;transition:border-color .6s}
 .pl__dl dt{color:var(--ink-2)}
@@ -228,7 +231,7 @@ h1,.h2,.end h2,.spec b,.vals b,.lamp-line,.end__phr,.card h3,.ft__sig,.cmp__tag,
 .pl__thumbs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(12px,1.6vw,28px);align-items:end}
 .pl__th{display:grid;gap:8px;width:100%;padding:0;border:0;background:none;color:var(--ink);text-align:left;cursor:pointer;opacity:.55;transition:opacity .3s}
 .pl__th:hover,.pl__th[aria-pressed="true"]{opacity:1}
-.pl__th img{width:100%;height:auto;transition:transform .4s var(--ease)}
+.pl__th img{width:auto;max-width:100%;height:clamp(56px,8vh,96px);object-fit:contain;object-position:left bottom;transition:transform .4s var(--ease)}
 .pl__th:hover img{transform:translateY(-4px)}
 .pl__th span{display:block;padding-top:8px;border-top:1px solid var(--line);font-size:14px;line-height:1.35}
 .pl__th[aria-pressed="true"] span{border-top:2px solid var(--ink);padding-top:7px}
