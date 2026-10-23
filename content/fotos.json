@@ -1,0 +1,175 @@
+{
+  "titulo": "A casa decorada.",
+  "texto": "Fotos da casa decorada, do quintal ao banheiro: a planta de 70,27 m² mobiliada, com o espaço gourmet nos fundos.",
+  "dica": "Arraste a foto de cima para ver a próxima.",
+  "voltar": "Voltar uma",
+  "cheia": "Tela cheia",
+  "ambientes": [
+    {
+      "id": "quintal",
+      "nome": "Quintal"
+    },
+    {
+      "id": "gourmet",
+      "nome": "Espaço gourmet"
+    },
+    {
+      "id": "sala",
+      "nome": "Sala e cozinha"
+    },
+    {
+      "id": "suite",
+      "nome": "Suíte"
+    },
+    {
+      "id": "quartos",
+      "nome": "Quartos"
+    },
+    {
+      "id": "banho",
+      "nome": "Banheiro"
+    }
+  ],
+  "fotos": [
+    {
+      "n": 2,
+      "amb": "quintal",
+      "legenda": "Quintal",
+      "w": 1440,
+      "h": 1080
+    },
+    {
+      "n": 4,
+      "amb": "quintal",
+      "legenda": "Quintal",
+      "w": 1440,
+      "h": 1080
+    },
+    {
+      "n": 1,
+      "amb": "quintal",
+      "legenda": "Quintal",
+      "w": 810,
+      "h": 1080
+    },
+    {
+      "n": 3,
+      "amb": "quintal",
+      "legenda": "Quintal",
+      "w": 810,
+      "h": 1080
+    },
+    {
+      "n": 5,
+      "amb": "quintal",
+      "legenda": "Quintal",
+      "w": 810,
+      "h": 1080
+    },
+    {
+      "n": 7,
+      "amb": "gourmet",
+      "legenda": "Espaço gourmet",
+      "w": 1440,
+      "h": 1080
+    },
+    {
+      "n": 6,
+      "amb": "gourmet",
+      "legenda": "Espaço gourmet",
+      "w": 1440,
+      "h": 1080
+    },
+    {
+      "n": 20,
+      "amb": "gourmet",
+      "legenda": "Espaço gourmet",
+      "w": 1440,
+      "h": 1080
+    },
+    {
+      "n": 8,
+      "amb": "gourmet",
+      "legenda": "Área de serviço",
+      "w": 1440,
+      "h": 1080
+    },
+    {
+      "n": 9,
+      "amb": "sala",
+      "legenda": "Sala e cozinha",
+      "w": 1440,
+      "h": 1080
+    },
+    {
+      "n": 12,
+      "amb": "sala",
+      "legenda": "Sala e cozinha",
+      "w": 1440,
+      "h": 1080
+    },
+    {
+      "n": 10,
+      "amb": "sala",
+      "legenda": "Sala e cozinha",
+      "w": 1440,
+      "h": 1080
+    },
+    {
+      "n": 11,
+      "amb": "sala",
+      "legenda": "Sala e cozinha",
+      "w": 810,
+      "h": 1080
+    },
+    {
+      "n": 16,
+      "amb": "suite",
+      "legenda": "Suíte",
+      "w": 1440,
+      "h": 1080
+    },
+    {
+      "n": 13,
+      "amb": "suite",
+      "legenda": "Suíte",
+      "w": 810,
+      "h": 1080
+    },
+    {
+      "n": 14,
+      "amb": "suite",
+      "legenda": "Suíte",
+      "w": 810,
+      "h": 1080
+    },
+    {
+      "n": 18,
+      "amb": "quartos",
+      "legenda": "Quartos",
+      "w": 810,
+      "h": 1080
+    },
+    {
+      "n": 19,
+      "amb": "quartos",
+      "legenda": "Quartos",
+      "w": 810,
+      "h": 1080
+    },
+    {
+      "n": 15,
+      "amb": "quartos",
+      "legenda": "Quartos",
+      "w": 1440,
+      "h": 1080
+    },
+    {
+      "n": 17,
+      "amb": "banho",
+      "legenda": "Banheiro",
+      "w": 1440,
+      "h": 1080
+    }
+  ]
+}

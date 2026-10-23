@@ -4,6 +4,7 @@ import { MobileDock } from "@/components/layout/MobileDock";
 import { Casas, Condicoes, Condominio, Contato, Hero, Localizacao } from "@/components/sections/Sections";
 import { Lazer } from "@/components/sections/Lazer";
 import { Plantas } from "@/components/sections/Plantas";
+import { Fotos } from "@/components/sections/Fotos";
 import { Entorno } from "@/components/sections/Entorno";
 import { Manifesto } from "@/components/sections/Manifesto";
 
@@ -18,6 +19,7 @@ export default function Home() {
         <Condominio />
         <Casas />
         <Plantas />
+        <Fotos />
         <Lazer />
         <Entorno />
         <Condicoes />

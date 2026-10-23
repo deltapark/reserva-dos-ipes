@@ -4,7 +4,17 @@ import { useEffect, useRef, useState } from "react";
 import { Img } from "./Img";
 import { ChevronLeft, ChevronRight, Close } from "./icons";
 
-export type LightboxPhoto = { img: string; legenda: string; alt: string };
+// img é o nome de um render (Img, quadro 1920x1071). Fotos em outra proporção mandam src/srcSet/w/h e thumb.
+export type LightboxPhoto = {
+  img: string;
+  legenda: string;
+  alt: string;
+  src?: string;
+  srcSet?: string;
+  thumb?: string;
+  w?: number;
+  h?: number;
+};
 
 type Props = {
   open: boolean;
@@ -79,7 +89,13 @@ export function Lightbox({ open, title, color, photos, start = 0, onClose }: Pro
         </button>
         {/* tabIndex + autoFocus: ao abrir, o foco vai para a foto, não para o X */}
         <figure className="lbx__fig" tabIndex={-1} autoFocus>
-          {photo && open && <Img key={photo.img} name={photo.img} alt={photo.alt} sizes="(max-width:700px) 100vw, 86vw" loading="eager" />}
+          {photo &&
+            open &&
+            (photo.src ? (
+              <img key={photo.img} src={photo.src} srcSet={photo.srcSet} sizes="(max-width:700px) 100vw, 86vw" width={photo.w} height={photo.h} alt={photo.alt} />
+            ) : (
+              <Img key={photo.img} name={photo.img} alt={photo.alt} sizes="(max-width:700px) 100vw, 86vw" loading="eager" />
+            ))}
           <figcaption className="lbx__cap">{photo?.legenda}</figcaption>
         </figure>
         <button className="lbx__btn lbx__side lbx__side--next" type="button" aria-label="Próxima foto" onClick={() => go(i + 1)}>
@@ -90,7 +106,7 @@ export function Lightbox({ open, title, color, photos, start = 0, onClose }: Pro
         {open &&
           photos.map((p, k) => (
             <button key={p.img} type="button" className="lbx__thumb" aria-label={`Ver ${p.legenda}`} aria-current={k === i} onClick={() => go(k)}>
-              <Img name={p.img} alt="" sizes="84px" />
+              {p.thumb ? <img src={p.thumb} alt="" loading="lazy" /> : <Img name={p.img} alt="" sizes="84px" />}
             </button>
           ))}
       </div>

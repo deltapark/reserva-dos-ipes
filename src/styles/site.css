@@ -280,6 +280,44 @@ h1,.h2,.end h2,.spec b,.vals b,.lamp-line,.end__phr,.card h3,.ft__sig,.cmp__tag,
   .pl__cheia .lbx__cap{position:sticky;left:0;width:100vw;padding:12px 16px;text-align:left}
 }
 
+/* fotos da casa decorada. Desktop (.ft__d): faixa com as fotos na mesma altura, de ponta a ponta.
+   Celular (.ft__m): pilha de fotos, arrastar a de cima revela a próxima. */
+.ft figure{margin:0}
+.ft__d{display:none}
+@media(min-width:960px){.ft__d{display:block}.ft__m{display:none}}
+.ft__bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px;margin-bottom:20px}
+.ft__ambs{display:flex;flex-wrap:wrap;gap:4px 26px}
+.ft__ambs button{min-height:40px;padding:0;border:0;border-bottom:2px solid transparent;background:none;color:var(--ink-2);font:500 15px var(--f);cursor:pointer;transition:color .2s,border-color .2s}
+.ft__ambs button:hover{color:var(--ink)}
+.ft__ambs button[aria-current="true"]{color:var(--ink);font-weight:700;border-bottom-color:var(--ink)}
+.ft__arws{display:flex;gap:10px}
+.ft__arw{display:grid;place-items:center;width:52px;height:52px;padding:0;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--ink);cursor:pointer;transition:border-color .2s,background-color .6s,color .6s}
+.ft__arw:hover{border-color:var(--ink)}
+.ft__arw:disabled{opacity:.35;cursor:default}
+.ft__arw svg{width:20px;height:20px}
+/* a faixa sai do .wrap para ir até a borda, mas começa alinhada com o conteúdo */
+.ft__tr{--ft-pad:max(var(--gut),calc((100% - var(--max)) / 2));display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--ft-pad);padding-inline:var(--ft-pad);scrollbar-width:none;overscroll-behavior-x:contain;cursor:grab}
+.ft__tr::-webkit-scrollbar{display:none}
+.ft__tr.is-drag{cursor:grabbing;scroll-snap-type:none}
+.ft__tr.is-drag button{pointer-events:none}
+.ft__sl{flex:none;scroll-snap-align:start;display:grid;gap:10px}
+.ft__sl button{display:block;height:clamp(320px,62vh,620px);padding:0;border:0;overflow:hidden;background:var(--line);cursor:zoom-in}
+.ft__sl img{display:block;height:100%;width:auto;max-width:none;user-select:none;transition:transform .9s var(--ease)}
+.ft__sl button:hover img{transform:scale(1.03)}
+.ft__sl figcaption{font-size:14px;color:var(--ink-2)}
+.ft__fim{flex:none;width:calc(var(--ft-pad) - 14px)}
+
+.ft__dica{margin-top:-16px;font-size:14px;color:var(--ink-2)}
+.ft__pk{position:relative;height:min(66vh,560px);margin:24px 6px 0}
+.ft__cd{position:absolute;inset:0;overflow:hidden;border:8px solid #fff;background:#fff;box-shadow:0 14px 34px rgba(16,26,46,.22);touch-action:pan-y;transition:transform .45s var(--ease);will-change:transform}
+.ft__cd.is-top{cursor:grab}
+.ft__cd.is-drag{transition:none;cursor:grabbing}
+.ft__cd img{width:100%;height:100%;object-fit:cover;pointer-events:none;user-select:none}
+.ft__leg{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:22px}
+.ft__leg b{font-family:var(--ft);font-weight:400;font-size:24px;line-height:1.1}
+.ft__leg span{font-size:14px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.ft__acts{display:flex;justify-content:space-between;margin-top:6px}
+
 /* lazer: a foto troca no lugar */
 .lz{display:grid;gap:40px}
 @media(min-width:960px){.lz{grid-template-columns:5fr 7fr;gap:72px}}

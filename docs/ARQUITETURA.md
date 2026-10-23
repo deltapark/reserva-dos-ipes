@@ -36,6 +36,11 @@ LP nova em `/` (06/10/2026); teaser antigo em `/teaser/` (noindex). Conferir `.h
 - Conteúdo e medidas em `content/plantas.json`.
 - Imagens: `scripts/plantas.mjs` corta a tarja preta dos renders de `assets-originais/PLANTAS/` (fora do Git) e grava `public/images/plantas-web/<id>-{900,1500,2200}.webp`. Rodar só quando entrar planta nova; os `w`/`h` do JSON vêm do `plantas.json` que o script escreve ao lado das imagens.
 
+## Fotos da casa decorada (23/10/2026)
+- Seção `#fotos`, logo depois de Plantas. Escolhidas entre protótipos pelo Thales: "Faixa" no desktop (a partir de 960px, `.ft__d`) e "Pilha" no celular (`.ft__m`). As duas abrem a foto no Lightbox de sempre.
+- Ordem, ambientes e legendas em `content/fotos.json`. A foto 17 ficou só "Banheiro" (não sabemos se é o da suíte).
+- Imagens: os originais ficam em `assets-originais/FOTOS DA CASA/` (fora do Git); `npm run images:fotos` grava `public/images/fotos/casa-<nn>-{640,g}.webp`, onde "g" é o tamanho original (até 1440px).
+
 ## Entorno e manifesto (05/10/2026)
 - Entorno substitui a antiga seção "Inspirado na beleza dos ipês". Mapa em tela cheia (100svh) com painel flutuante no canto (abas "Pontos próximos" e "Como chegar"); no celular (< 760px) vira a régua de pontos do protótipo B: cartões que deslizam acima da barra Consultor/Simular (parar num cartão já leva a câmera ao ponto), texto do ponto sobre a mata e "Como chegar" num botão fixo que abre o painel como gaveta. Medalhão do farol usa `public/brand/icone-arvore.webp` (gerado de `assets-originais/marca/icone`; o tronco é branco, por isso o fundo azul-noite). Pontos, contorno do lote e posições (pixels da foto 1920x1080) ficam em `content/entorno.json`; para mover um pin, ajuste `x`/`y` ali. Ponto com `destino: null` aparece sem link de rota.
 - Rotas usam as coordenadas de `content/site.json` (`localizacao.lat/lng`).

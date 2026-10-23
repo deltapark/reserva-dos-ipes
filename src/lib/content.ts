@@ -4,8 +4,9 @@ import site from "@content/site.json";
 import galeria from "@content/galeria.json";
 import entorno from "@content/entorno.json";
 import plantas from "@content/plantas.json";
+import fotos from "@content/fotos.json";
 
-export { copy, site, galeria, entorno, plantas };
+export { copy, site, galeria, entorno, plantas, fotos };
 
 export type Casa = (typeof plantas.casas)[number] & { gourmet?: string };
 export type Rua = (typeof galeria.ruas)[number];
