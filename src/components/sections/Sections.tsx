@@ -1,5 +1,6 @@
 // Seções sem interação própria: renderizadas no build (Server Components).
 import { copy, galeria, site, splitValor } from "@/lib/content";
+import { Logo } from "@/components/ui/Logo";
 import { DayNight } from "@/components/ui/DayNight";
 import { Img } from "@/components/ui/Img";
 import { HeroCompare } from "./HeroCompare";
@@ -15,7 +16,10 @@ export function Hero() {
   return (
     <section className="hero" aria-labelledby="h1">
       <div className="wrap hero__grid">
-        <h1 id="h1">{t.titulo}</h1>
+        {/* a logo no lugar do nome, a pedido do cliente; o alt dela dá o nome ao h1 */}
+        <h1 id="h1" className="hero__logo">
+          <Logo />
+        </h1>
         <div className="hero__aside">
           <p className="hero__sub">{t.subtitulo}</p>
           <p className="body">

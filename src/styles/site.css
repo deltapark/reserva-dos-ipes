@@ -69,7 +69,8 @@ h1,.h2,.end h2,.spec b,.vals b,.lamp-line,.end__phr,.card h3,.ft__sig,.cmp__tag,
 /* hero */
 .hero{padding-top:clamp(40px,6vw,88px)}
 .hero__grid{display:grid;gap:24px;padding-bottom:clamp(32px,4vw,56px)}
-.hero h1{font-weight:300;font-size:clamp(56px,9.6vw,152px);line-height:.9;letter-spacing:-.035em}
+.hero h1{margin:0;line-height:0}
+.hero__logo .logo{height:auto;width:clamp(260px,40vw,680px);max-width:100%}
 .hero__aside{display:grid;gap:16px;align-content:end}
 .hero__cta{display:flex;flex-wrap:wrap;gap:10px}
 .hero__hint{font-size:14px;color:var(--ink-2)}
